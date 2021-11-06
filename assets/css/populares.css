@@ -2,8 +2,14 @@
     padding: 3rem 0;
 }
 
-.populares__titulo, .populares__botao {
-    margin-left: 1rem;
+.populares__cabecalho {
+    border-bottom: 1px solid #DCDCDC;
+    display: flex;
+    justify-content: space-between;
+}
+
+.populares__botao {
+    border: none;
 }
 
 .populares__conteudo {
@@ -20,10 +26,14 @@
     "card-imagem"
     "card-corpo";
     grid-template-columns: 100%;
-    grid-template-rows: 173px auto;
-    margin-right: .1rem;
-    margin-left: .8rem;
-    width: calc(20% - 1rem);
+}
+
+.populares__card___titulo {
+    font-size: 16pt;
+}
+
+.populares__card:last-child {
+    margin-right: 0;
 }
 
 .populares__card___imagem {

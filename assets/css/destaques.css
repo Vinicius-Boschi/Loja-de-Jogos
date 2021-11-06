@@ -1,7 +1,3 @@
-body {
-    overflow-x: hidden;
-}
-
 .destaques {
     display: grid;
     grid-gap: .2rem; /* Para dar espaço nas fotos */
@@ -19,7 +15,6 @@ body {
 
 .principal {
     background: url(../img/fortnite.jpg) center / cover no-repeat;
-    grid-column: 1/4;
     grid-row: 1/3;
 }
 
@@ -33,31 +28,18 @@ body {
 
 .secundario:nth-child(2) {
     background: url(../img/pubg.jpg) center / cover no-repeat;
-    grid-column: 4/4; /* Posição que a foto vai começar e terminar nas colunas */
-    grid-row: 1/1; /* Posição que a foto vai começar e terminar nas linhas */
 }
 
 .secundario:nth-child(3) {
     background: url(../img/slack.png) center / cover no-repeat;
-    grid-column: 4/4;
-    grid-row: 2/2;
 }
 
 .secundario:nth-child(4) {
     background: url(../img/whatsapp.png) center / cover no-repeat;
-    grid-column: 4/4;
-    grid-row: 3/3;
 }
 
 .secundario:nth-child(5) {
     background: url(../img/cs-go.jpg) center / cover no-repeat;
-    grid-column: 3/3;
-    grid-row: 3/3;
-}
-
-.categorias {
-    grid-column: 1/3;
-    grid-row: 3/3;
 }
 
 .lista {
@@ -65,6 +47,7 @@ body {
     flex-wrap: wrap;
     height: 100%;
     justify-content: space-between;
+    grid-row: 3/3;
 }
 
 .item {
@@ -73,11 +56,5 @@ body {
     border-left: 5px solid transparent;
     color: #333333;
     display: flex;
-    padding: 1rem;
-    width: 45%;
-}
-
-.link {
-    text-decoration: none;
-    color: inherit;
+    width: 50%;
 }

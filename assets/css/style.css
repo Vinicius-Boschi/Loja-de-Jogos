@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .app {
     background: #F1F1F1;
     display: grid;  
@@ -16,13 +11,131 @@
 }
 
 .cabecalho {
+    display: flex;
+    align-items: center;
     grid-area: cabecalho;
+    padding: 0 2rem;
+}
+
+.menu__link {
+    padding: .5rem 1rem;
+}
+
+.menu__link:hover, .menu__link.ativo {
+    border-bottom: 2px solid #0073e6;
 }
 
 .conteudo {
     grid-area: conteudo;
+    padding: 0 2rem;
 }
 
 .rodape {
+    background: #FDFDFD;
+    font-size: .8rem;
     grid-area: rodape;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Responsividade do Site */
+
+@media screen and (min-width: 0) {
+
+    .principal, .categorias {
+        grid-column: 1/5; /* Posição que a foto vai começar e terminar nas colunas */
+    }
+
+    .secundario:nth-child(2) {
+        display: none;
+        grid-column: none;
+        grid-row: none; /* Posição que a foto vai começar e terminar nas linhas */
+    }
+
+    .secundario:nth-child(3) {
+        display: none;
+        grid-column: none;
+        grid-row: none;
+    }
+
+    .secundario:nth-child(4) {
+        display: none;
+        grid-column: none;
+        grid-row: none;
+    }
+
+    .secundario:nth-child(5) {
+        display: none;
+        grid-column: none;
+        grid-row: none;
+    }
+
+    .populares__conteudo {
+        flex-direction: column;
+    }
+
+    .populares__card {
+        grid-template-rows: 150px auto;
+        margin-bottom: 3rem;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .principal {
+        grid-column: 1/4;
+    }
+
+    .secundario:nth-child(2) {
+        display: flex;
+        grid-column: 4/4;
+        grid-row: 1/1;
+    }
+
+    .secundario:nth-child(3) {
+        display: flex;
+        grid-column: 4/4;
+        grid-row: 2/3;
+    }
+
+    .secundario:nth-child(4) {
+        display: flex;
+        grid-column: 4/4;
+        grid-row: 3/4;
+    }
+
+    .secundario:nth-child(5) {
+        display: flex;
+        grid-column: 3/4;
+        grid-row: 3/3;
+    }
+
+    .categorias {
+        grid-column: 1/3;
+    }
+
+    .populares__conteudo {
+        flex-direction: row;
+    }
+
+    .populares__card {
+        grid-template-rows: 173px auto;
+        margin-bottom: 3rem;
+        margin-right: 1rem;
+        width: calc(50% - 1rem);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .populares__card {
+        width: calc(33.33% - 1rem);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .populares__card {
+        margin-bottom: 0;
+        width: calc(20% - 1rem);
+    }
 }
