@@ -1,5 +1,9 @@
-#Loja de Jogos
+# Loja de Jogos
 
 Uma loja de jogos criada com o grid layout.
 
-<img src="assets/img/Captura de tela 2021-11-06 165548.jpg" alt="">
+Inicio do site
+<img src="assets/img/inicio.jpg" alt="foto-inicio">
+
+Aplicativos e Jogos populares do site.
+<img src="assets/img/apps-populares.jpg" alt="foto-apps-populares">
